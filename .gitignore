@@ -1,0 +1,16 @@
+# 构建产物
+.build/
+dist/
+*.dSYM/
+
+# 演示动画的中间帧
+docs/demo/frames/
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# 日志
+*.log
