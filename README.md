@@ -33,13 +33,15 @@ AnchorScroll 是一款独立的 macOS 菜单栏中键自动滚动工具，使用
 
 ## 下载与安装
 
-从 [Releases](../../releases) 下载安装镜像：
+从 [Releases](../../releases) 下载安装镜像，当前版本 `v1.0.3`：
 
 | 文件 | 用途 |
 | --- | --- |
-| `AnchorScroll-1.0.3-macOS-arm64.dmg` | 安装镜像，内含应用与「应用程序」快捷方式 |
-| `AnchorScroll-1.0.3-macOS-arm64.zip` | 免安装压缩包，解压后得到 `AnchorScroll.app` |
-| `SHA256SUMS.md` | 上述文件的 SHA-256 校验值 |
+| [`AnchorScroll-1.0.3-macOS-arm64.dmg`](https://github.com/iverson226/AnchorScroll/releases/download/v1.0.3/AnchorScroll-1.0.3-macOS-arm64.dmg) | 安装镜像，内含应用与「应用程序」快捷方式 |
+| [`AnchorScroll-1.0.3-macOS-arm64.zip`](https://github.com/iverson226/AnchorScroll/releases/download/v1.0.3/AnchorScroll-1.0.3-macOS-arm64.zip) | 免安装压缩包，解压后得到 `AnchorScroll.app` |
+| [`SHA256SUMS.md`](https://github.com/iverson226/AnchorScroll/releases/download/v1.0.3/SHA256SUMS.md) | 上述文件的 SHA-256 校验值 |
+
+> 演示动画另提供 MP4 版：[`anchorscroll-demo.mp4`](https://github.com/iverson226/AnchorScroll/releases/download/v1.0.3/anchorscroll-demo.mp4)。
 
 安装步骤：
 
