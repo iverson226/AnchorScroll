@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>AnchorScroll 网页滚动测试</title>
+<style>
+body{font:18px/1.8 system-ui;margin:0;color:#202630;background:#fafbfc}
+header{position:fixed;top:0;left:0;right:0;background:#fff;border-bottom:1px solid #ccc;padding:12px 24px;z-index:10}
+main{margin:140px 32px 40px;width:68%}p{padding:20px;background:white;border-bottom:1px solid #eee}
+aside{position:fixed;right:24px;top:140px;width:22%;height:60vh;overflow:auto;border:2px solid #aab;border-radius:8px;background:white;padding:12px}
+output{font-family:monospace;font-size:15px}a{color:#135db5}
+</style>
+<header><b>AnchorScroll 实际网页测试</b>　<output id="metrics"></output><br>
+点按正文中键，小幅下移并停住；回中心；移到侧栏外仍应只滚动初始区域。Option＋中键可测试下方链接。</header>
+<main id="main"><a href="https://example.com" target="_blank">中键链接测试</a></main>
+<aside id="nested">独立滚动区域</aside>
+<script>
+for(let i=1;i<=250;i++){const p=document.createElement('p');p.textContent=`正文第 ${i} 段：低速应持续缓慢滚动，移远后加速，回中心停住。`;main.append(p)}
+for(let i=1;i<=100;i++){const p=document.createElement('p');p.textContent=`侧栏第 ${i} 段`;nested.append(p)}
+let wheelEvents=0,lastWheel={};
+document.addEventListener('wheel',e=>{wheelEvents++;lastWheel={x:e.clientX,y:e.clientY,dy:e.deltaY,mode:e.deltaMode}},{passive:true});
+setInterval(()=>{metrics.textContent=JSON.stringify({pageY:Math.round(scrollY),nestedY:Math.round(nested.scrollTop),wheelEvents,lastWheel})},100);
+</script></html>
